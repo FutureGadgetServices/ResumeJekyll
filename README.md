@@ -118,7 +118,7 @@ sidebar:
   # Profile
   name: Your Name
   tagline: Your Title
-  avatar: profile.png      # Place in /assets/images/
+  avatar: profile.png      # Filename of your profile picture
 
   # Contact Links
   email: your@email.com
@@ -142,6 +142,18 @@ sidebar:
     - item: Hobby
       link:
 ```
+
+#### Updating Your Profile Picture
+
+1. Place your profile image in the `assets/images/` folder
+2. Update the `avatar` field in `_data/data.yml` with your filename:
+
+```yaml
+sidebar:
+  avatar: your-photo.png   # Supports .png, .jpg, .jpeg
+```
+
+Recommended size: 100x100 pixels for optimal display.
 
 ### Deployment Configuration
 
