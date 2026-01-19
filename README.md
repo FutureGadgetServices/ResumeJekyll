@@ -1,6 +1,3 @@
-<a href="https://jekyll-themes.com">
-<img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
 
 # Orbit
 > This theme is designed by Xiaoying Riley at [3rd Wave Media](http://themes.3rdwavemedia.com/).
@@ -84,7 +81,88 @@ Thanks to [t-h-e(sfrost)](https://github.com/t-h-e) for all the [contributions](
 
 Check out for more themes: [**Jekyll Themes**](http://jekyll-themes.com).
 
-## Star History
+---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sharu725/online-cv&type=Date)](https://star-history.com/#sharu725/online-cv&Date)
+## Future Gadget Labs Contributions
 
+### Updating Resume Contents
+
+All resume content is managed in a single file: `_data/data.yml`
+
+#### Main Content Sections
+
+Edit these sections in `data.yml` to update the main body of your resume:
+
+| Section | Description |
+|---------|-------------|
+| `career-profile` | Your career summary at the top |
+| `education` | Degrees, universities, and timeframes |
+| `experiences` | Work history with roles, companies, and details |
+| `certifications` | Professional certifications |
+| `projects` | Side projects and portfolio items |
+| `oss` | Open source contributions |
+| `publications` | Published papers or articles |
+| `recommendations` | References and testimonials |
+| `skills` | Skills with proficiency percentages |
+
+#### Updating the Right Sidebar
+
+The `sidebar` section in `data.yml` controls the right sidebar content:
+
+```yaml
+sidebar:
+  position: right          # Position: left or right
+  about: True              # Show "how to use?" section
+  education: True          # Show education in sidebar (False = main section)
+
+  # Profile
+  name: Your Name
+  tagline: Your Title
+  avatar: profile.png      # Place in /assets/images/
+
+  # Contact Links
+  email: your@email.com
+  phone: 012 345 6789
+  website: https://yoursite.com
+  linkedin: username
+  github: username
+  twitter: '@username'
+
+  # Languages
+  languages:
+    title: Languages
+    info:
+    - idiom: English
+      level: Native
+
+  # Interests
+  interests:
+    title: Interests
+    info:
+    - item: Hobby
+      link:
+```
+
+### Deployment Configuration
+
+Update `_config.yml` to match your deployment environment:
+
+```yaml
+# Site Settings
+title: My Resume
+url: 'https://username.github.io'    # Your site's base URL
+baseurl: '/repository-name'          # Your repository name (or '' for root)
+```
+
+#### Common Deployment Scenarios
+
+| Deployment | `url` | `baseurl` |
+|------------|-------|-----------|
+| GitHub Pages (project) | `https://username.github.io` | `/repository-name` |
+| GitHub Pages (user site) | `https://username.github.io` | `` (empty) |
+| Custom domain | `https://yourdomain.com` | `` (empty) |
+| Subdirectory on custom domain | `https://yourdomain.com` | `/resume` |
+
+**Important:** Assets and links will break if these values don't match your actual deployment URL.
+
+---
